@@ -101,10 +101,10 @@
 		D78A98D7289922A3000D361E /* Expenses Tracker */ = {
 			isa = PBXGroup;
 			children = (
-				D78A991628992553000D361E /* Supporting Files */,
 				D78A991528992542000D361E /* Application */,
+				D78A991728992592000D361E /* Domain */,
 				D78A9911289924EF000D361E /* Helpers */,
-				D78A990C2899237D000D361E /* MainTabBarController.swift */,
+				D78A991628992553000D361E /* Supporting Files */,
 			);
 			path = "Expenses Tracker";
 			sourceTree = "<group>";
@@ -168,6 +168,22 @@
 				D78A98E6289922A4000D361E /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D78A991728992592000D361E /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				D78A9918289925BF000D361E /* Main Tabbar */,
+			);
+			name = Domain;
+			sourceTree = "<group>";
+		};
+		D78A9918289925BF000D361E /* Main Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				D78A990C2899237D000D361E /* MainTabBarController.swift */,
+			);
+			name = "Main Tabbar";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
