@@ -22,15 +22,15 @@ class MainTabBarController: UITabBarController {
         ]
     }
     
-    private func expencesList() -> UIViewController {
-        let expencesList = UIViewController()
+    private func expencesList() -> ListViewController {
+        let expencesList = ListViewController()
         expencesList.title = "Expenses"
         
         return expencesList
     }
     
-    private func friendsList() -> UIViewController {
-        let friendsList = UIViewController()
+    private func friendsList() -> ListViewController {
+        let friendsList = ListViewController()
         friendsList.title = "Friends"
         
         return friendsList

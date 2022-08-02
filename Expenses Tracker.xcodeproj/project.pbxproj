@@ -22,6 +22,9 @@
 		D78A992428992A8C000D361E /* UIViewContoller+TestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78A992328992A8C000D361E /* UIViewContoller+TestHelper.swift */; };
 		D78A992928994CC2000D361E /* FriendsIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78A992828994CC2000D361E /* FriendsIntegrationTests.swift */; };
 		D78A992B28995228000D361E /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78A992A28995228000D361E /* ListViewController.swift */; };
+		D78A993528995356000D361E /* ItemsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78A993428995356000D361E /* ItemsViewModel.swift */; };
+		D78A99382899549F000D361E /* UIVIewController+showAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78A99372899549F000D361E /* UIVIewController+showAlert.swift */; };
+		D78A993B28995657000D361E /* ItemsServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78A993A28995657000D361E /* ItemsServiceMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +64,9 @@
 		D78A992328992A8C000D361E /* UIViewContoller+TestHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewContoller+TestHelper.swift"; sourceTree = "<group>"; };
 		D78A992828994CC2000D361E /* FriendsIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsIntegrationTests.swift; sourceTree = "<group>"; };
 		D78A992A28995228000D361E /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		D78A993428995356000D361E /* ItemsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewModel.swift; sourceTree = "<group>"; };
+		D78A99372899549F000D361E /* UIVIewController+showAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIVIewController+showAlert.swift"; sourceTree = "<group>"; };
+		D78A993A28995657000D361E /* ItemsServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsServiceMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +128,7 @@
 		D78A98EE289922A5000D361E /* Expenses TrackerTests */ = {
 			isa = PBXGroup;
 			children = (
+				D78A993928995641000D361E /* Mocks */,
 				D78A992528994C9C000D361E /* Friends */,
 				D78A991E289928A4000D361E /* Helper */,
 				D78A9919289927B6000D361E /* Expences */,
@@ -158,7 +165,7 @@
 		D78A9912289924F6000D361E /* Extentions */ = {
 			isa = PBXGroup;
 			children = (
-				D78A991328992510000D361E /* UIViewController+makeNav.swift */,
+				D78A993628995475000D361E /* UIViewController */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -228,9 +235,35 @@
 		D78A9932289952E3000D361E /* List View */ = {
 			isa = PBXGroup;
 			children = (
+				D78A99332899533D000D361E /* Models */,
 				D78A992A28995228000D361E /* ListViewController.swift */,
 			);
 			path = "List View";
+			sourceTree = "<group>";
+		};
+		D78A99332899533D000D361E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D78A993428995356000D361E /* ItemsViewModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D78A993628995475000D361E /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D78A991328992510000D361E /* UIViewController+makeNav.swift */,
+				D78A99372899549F000D361E /* UIVIewController+showAlert.swift */,
+			);
+			path = UIViewController;
+			sourceTree = "<group>";
+		};
+		D78A993928995641000D361E /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				D78A993A28995657000D361E /* ItemsServiceMock.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -363,11 +396,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D78A99382899549F000D361E /* UIVIewController+showAlert.swift in Sources */,
 				D78A991428992510000D361E /* UIViewController+makeNav.swift in Sources */,
 				D78A98D9289922A3000D361E /* AppDelegate.swift in Sources */,
 				D78A990D2899237D000D361E /* MainTabBarController.swift in Sources */,
 				D78A992B28995228000D361E /* ListViewController.swift in Sources */,
 				D78A98DB289922A3000D361E /* SceneDelegate.swift in Sources */,
+				D78A993528995356000D361E /* ItemsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,6 +415,7 @@
 				D78A9910289924D2000D361E /* UINavigationMakeNavTest.swift in Sources */,
 				D78A9920289928AF000D361E /* SceneBuilder.swift in Sources */,
 				D78A991D289927E3000D361E /* ExpencesIntegrationTests.swift in Sources */,
+				D78A993B28995657000D361E /* ItemsServiceMock.swift in Sources */,
 				D78A992928994CC2000D361E /* FriendsIntegrationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

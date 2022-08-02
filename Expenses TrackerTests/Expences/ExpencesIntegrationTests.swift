@@ -6,12 +6,34 @@
 //
 
 import XCTest
+@testable import Expenses_Tracker
 
 class ExpencesIntegrationTests: XCTestCase {
 
+    var sut: ListViewController!
+    
+    override func setUpWithError() throws {
+        try super.setUpWithError()
+        sut = try SceneBuilder().build().expencesList()
+    }
+    
+    override func tearDownWithError() throws {
+        sut = nil
+        try super.tearDownWithError()
+    }
+    
     func test_expencesList_title() throws {
-        let expencesList = try SceneBuilder().build().expencesList()
-        XCTAssertEqual(expencesList.title, "Expenses")
+        XCTAssertEqual(sut.title, "Expenses")
+    }
+    
+    func test_expencesList_callServiceLoadItems_when_viewWillApear() {
+        
+        let mock = ItemsServiceMock()
+        sut.service = mock
+        
+        sut.viewDidLoad()
+        
+        XCTAssertEqual(mock.isStarted, true)
     }
 
 }
@@ -23,8 +45,8 @@ private extension ContainerViewControllerSpy {
     /// without coupling the tests with internal implementation details, such as the tab item index.
     /// So we can later change those internal details easily without breaking the tests.
     ///
-    func expencesList() throws -> UIViewController {
-        let vc = try XCTUnwrap((rootTab(atIndex: 0) as UINavigationController).topViewController, "couldn't find expences list")
+    func expencesList() throws -> ListViewController {
+        let vc = try XCTUnwrap((rootTab(atIndex: 0) as UINavigationController).topViewController as? ListViewController, "couldn't find expences list")
         vc.triggerLifecycleIfNeeded()
         return vc
     }

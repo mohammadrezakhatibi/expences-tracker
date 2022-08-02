@@ -31,8 +31,8 @@ class FriendsIntegrationTests: XCTestCase {
 
 private extension ContainerViewControllerSpy {
     
-    func friendsList() throws -> UIViewController {
-        let vc = try XCTUnwrap((rootTab(atIndex: 1) as UINavigationController).topViewController, "couldn't find friends list")
+    func friendsList() throws -> ListViewController {
+        let vc = try XCTUnwrap((rootTab(atIndex: 1) as UINavigationController).topViewController as? ListViewController, "couldn't find friends list")
         vc.triggerLifecycleIfNeeded()
         return vc
     }
