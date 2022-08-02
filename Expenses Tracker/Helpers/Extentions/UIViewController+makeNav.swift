@@ -8,7 +8,7 @@
 import UIKit
 
 extension UIViewController {
-    func makeNav(title: String, image: String) -> UIViewController {
+    func addNavigation(title: String, image: String) -> UIViewController {
         
         let nav = UINavigationController(rootViewController: self)
         nav.tabBarItem.image = UIImage(

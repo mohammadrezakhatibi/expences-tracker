@@ -25,7 +25,7 @@ final class UINavigationMakeNavTest: XCTestCase {
     
     private func initialVC() {
         let vc = UIViewController()
-        sut = vc.makeNav(title: "Test", image: "folder")
+        sut = vc.addNavigation(title: "Test", image: "folder")
     }
 
     func test_makeNav_title() {

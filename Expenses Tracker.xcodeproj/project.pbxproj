@@ -11,12 +11,17 @@
 		D78A98DB289922A3000D361E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78A98DA289922A3000D361E /* SceneDelegate.swift */; };
 		D78A98E2289922A4000D361E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D78A98E1289922A4000D361E /* Assets.xcassets */; };
 		D78A98E5289922A4000D361E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D78A98E3289922A4000D361E /* LaunchScreen.storyboard */; };
-		D78A98F0289922A5000D361E /* Expenses_TrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78A98EF289922A5000D361E /* Expenses_TrackerTests.swift */; };
 		D78A98FA289922A5000D361E /* Expenses_TrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78A98F9289922A5000D361E /* Expenses_TrackerUITests.swift */; };
 		D78A98FC289922A5000D361E /* Expenses_TrackerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78A98FB289922A5000D361E /* Expenses_TrackerUITestsLaunchTests.swift */; };
 		D78A990D2899237D000D361E /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78A990C2899237D000D361E /* MainTabBarController.swift */; };
 		D78A9910289924D2000D361E /* UINavigationMakeNavTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78A990F289924D2000D361E /* UINavigationMakeNavTest.swift */; };
 		D78A991428992510000D361E /* UIViewController+makeNav.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78A991328992510000D361E /* UIViewController+makeNav.swift */; };
+		D78A991D289927E3000D361E /* ExpencesIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78A991C289927E3000D361E /* ExpencesIntegrationTests.swift */; };
+		D78A9920289928AF000D361E /* SceneBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78A991F289928AF000D361E /* SceneBuilder.swift */; };
+		D78A9922289928F7000D361E /* ContainerViewControllerSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78A9921289928F7000D361E /* ContainerViewControllerSpy.swift */; };
+		D78A992428992A8C000D361E /* UIViewContoller+TestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78A992328992A8C000D361E /* UIViewContoller+TestHelper.swift */; };
+		D78A992928994CC2000D361E /* FriendsIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78A992828994CC2000D361E /* FriendsIntegrationTests.swift */; };
+		D78A992B28995228000D361E /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78A992A28995228000D361E /* ListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,13 +49,18 @@
 		D78A98E4289922A4000D361E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D78A98E6289922A4000D361E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D78A98EB289922A5000D361E /* Expenses TrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Expenses TrackerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D78A98EF289922A5000D361E /* Expenses_TrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expenses_TrackerTests.swift; sourceTree = "<group>"; };
 		D78A98F5289922A5000D361E /* Expenses TrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Expenses TrackerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D78A98F9289922A5000D361E /* Expenses_TrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expenses_TrackerUITests.swift; sourceTree = "<group>"; };
 		D78A98FB289922A5000D361E /* Expenses_TrackerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expenses_TrackerUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D78A990C2899237D000D361E /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		D78A990F289924D2000D361E /* UINavigationMakeNavTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationMakeNavTest.swift; sourceTree = "<group>"; };
 		D78A991328992510000D361E /* UIViewController+makeNav.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+makeNav.swift"; sourceTree = "<group>"; };
+		D78A991C289927E3000D361E /* ExpencesIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpencesIntegrationTests.swift; sourceTree = "<group>"; };
+		D78A991F289928AF000D361E /* SceneBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneBuilder.swift; sourceTree = "<group>"; };
+		D78A9921289928F7000D361E /* ContainerViewControllerSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewControllerSpy.swift; sourceTree = "<group>"; };
+		D78A992328992A8C000D361E /* UIViewContoller+TestHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewContoller+TestHelper.swift"; sourceTree = "<group>"; };
+		D78A992828994CC2000D361E /* FriendsIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsIntegrationTests.swift; sourceTree = "<group>"; };
+		D78A992A28995228000D361E /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,7 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				D78A991528992542000D361E /* Application */,
-				D78A991728992592000D361E /* Domain */,
+				D78A992D28995288000D361E /* Domain */,
 				D78A9911289924EF000D361E /* Helpers */,
 				D78A991628992553000D361E /* Supporting Files */,
 			);
@@ -112,8 +122,10 @@
 		D78A98EE289922A5000D361E /* Expenses TrackerTests */ = {
 			isa = PBXGroup;
 			children = (
+				D78A992528994C9C000D361E /* Friends */,
+				D78A991E289928A4000D361E /* Helper */,
+				D78A9919289927B6000D361E /* Expences */,
 				D78A990E289924B0000D361E /* General */,
-				D78A98EF289922A5000D361E /* Expenses_TrackerTests.swift */,
 			);
 			path = "Expenses TrackerTests";
 			sourceTree = "<group>";
@@ -170,20 +182,55 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		D78A991728992592000D361E /* Domain */ = {
+		D78A9919289927B6000D361E /* Expences */ = {
 			isa = PBXGroup;
 			children = (
-				D78A9918289925BF000D361E /* Main Tabbar */,
+				D78A991C289927E3000D361E /* ExpencesIntegrationTests.swift */,
 			);
-			name = Domain;
+			path = Expences;
 			sourceTree = "<group>";
 		};
-		D78A9918289925BF000D361E /* Main Tabbar */ = {
+		D78A991E289928A4000D361E /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				D78A991F289928AF000D361E /* SceneBuilder.swift */,
+				D78A9921289928F7000D361E /* ContainerViewControllerSpy.swift */,
+				D78A992328992A8C000D361E /* UIViewContoller+TestHelper.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		D78A992528994C9C000D361E /* Friends */ = {
+			isa = PBXGroup;
+			children = (
+				D78A992828994CC2000D361E /* FriendsIntegrationTests.swift */,
+			);
+			path = Friends;
+			sourceTree = "<group>";
+		};
+		D78A992D28995288000D361E /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				D78A9932289952E3000D361E /* List View */,
+				D78A9930289952C6000D361E /* Main */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		D78A9930289952C6000D361E /* Main */ = {
 			isa = PBXGroup;
 			children = (
 				D78A990C2899237D000D361E /* MainTabBarController.swift */,
 			);
-			name = "Main Tabbar";
+			path = Main;
+			sourceTree = "<group>";
+		};
+		D78A9932289952E3000D361E /* List View */ = {
+			isa = PBXGroup;
+			children = (
+				D78A992A28995228000D361E /* ListViewController.swift */,
+			);
+			path = "List View";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -319,6 +366,7 @@
 				D78A991428992510000D361E /* UIViewController+makeNav.swift in Sources */,
 				D78A98D9289922A3000D361E /* AppDelegate.swift in Sources */,
 				D78A990D2899237D000D361E /* MainTabBarController.swift in Sources */,
+				D78A992B28995228000D361E /* ListViewController.swift in Sources */,
 				D78A98DB289922A3000D361E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -327,8 +375,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D78A98F0289922A5000D361E /* Expenses_TrackerTests.swift in Sources */,
+				D78A9922289928F7000D361E /* ContainerViewControllerSpy.swift in Sources */,
+				D78A992428992A8C000D361E /* UIViewContoller+TestHelper.swift in Sources */,
 				D78A9910289924D2000D361E /* UINavigationMakeNavTest.swift in Sources */,
+				D78A9920289928AF000D361E /* SceneBuilder.swift in Sources */,
+				D78A991D289927E3000D361E /* ExpencesIntegrationTests.swift in Sources */,
+				D78A992928994CC2000D361E /* FriendsIntegrationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
