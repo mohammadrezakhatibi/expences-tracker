@@ -2,7 +2,7 @@
 //  MainTabBarController.swift
 //  Expenses Tracker
 //
-//  Created by mohammdreza on 8/2/22.
+//  Created by mohammadreza on 8/2/22.
 //
 
 import UIKit
@@ -11,22 +11,22 @@ class MainTabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupViewContoller()
+        setupViewController()
         view.backgroundColor = .white
     }
     
-    private func setupViewContoller() {
+    private func setupViewController() {
         viewControllers = [
-            expencesList().addNavigation(title: "Expenses", image: "creditcard"),
+            expensesList().addNavigation(title: "Expenses", image: "creditcard"),
             friendsList().addNavigation(title: "Friends", image: "person.2")
         ]
     }
     
-    private func expencesList() -> ListViewController {
-        let expencesList = ListViewController()
-        expencesList.title = "Expenses"
+    private func expensesList() -> ListViewController {
+        let expensesList = ListViewController()
+        expensesList.title = "Expenses"
         
-        return expencesList
+        return expensesList
     }
     
     private func friendsList() -> ListViewController {

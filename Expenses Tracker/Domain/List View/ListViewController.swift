@@ -2,7 +2,7 @@
 //  ListViewController.swift
 //  Expenses Tracker
 //
-//  Created by mohammdreza on 8/2/22.
+//  Created by mohammadreza on 8/2/22.
 //
 
 import UIKit

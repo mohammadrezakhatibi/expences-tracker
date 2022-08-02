@@ -16,7 +16,7 @@
 		D78A990D2899237D000D361E /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78A990C2899237D000D361E /* MainTabBarController.swift */; };
 		D78A9910289924D2000D361E /* UINavigationMakeNavTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78A990F289924D2000D361E /* UINavigationMakeNavTest.swift */; };
 		D78A991428992510000D361E /* UIViewController+makeNav.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78A991328992510000D361E /* UIViewController+makeNav.swift */; };
-		D78A991D289927E3000D361E /* ExpencesIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78A991C289927E3000D361E /* ExpencesIntegrationTests.swift */; };
+		D78A991D289927E3000D361E /* ExpensesIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78A991C289927E3000D361E /* ExpensesIntegrationTests.swift */; };
 		D78A9920289928AF000D361E /* SceneBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78A991F289928AF000D361E /* SceneBuilder.swift */; };
 		D78A9922289928F7000D361E /* ContainerViewControllerSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78A9921289928F7000D361E /* ContainerViewControllerSpy.swift */; };
 		D78A992428992A8C000D361E /* UIViewContoller+TestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78A992328992A8C000D361E /* UIViewContoller+TestHelper.swift */; };
@@ -58,7 +58,7 @@
 		D78A990C2899237D000D361E /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		D78A990F289924D2000D361E /* UINavigationMakeNavTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationMakeNavTest.swift; sourceTree = "<group>"; };
 		D78A991328992510000D361E /* UIViewController+makeNav.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+makeNav.swift"; sourceTree = "<group>"; };
-		D78A991C289927E3000D361E /* ExpencesIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpencesIntegrationTests.swift; sourceTree = "<group>"; };
+		D78A991C289927E3000D361E /* ExpensesIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesIntegrationTests.swift; sourceTree = "<group>"; };
 		D78A991F289928AF000D361E /* SceneBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneBuilder.swift; sourceTree = "<group>"; };
 		D78A9921289928F7000D361E /* ContainerViewControllerSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewControllerSpy.swift; sourceTree = "<group>"; };
 		D78A992328992A8C000D361E /* UIViewContoller+TestHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewContoller+TestHelper.swift"; sourceTree = "<group>"; };
@@ -131,7 +131,7 @@
 				D78A993928995641000D361E /* Mocks */,
 				D78A992528994C9C000D361E /* Friends */,
 				D78A991E289928A4000D361E /* Helper */,
-				D78A9919289927B6000D361E /* Expences */,
+				D78A9919289927B6000D361E /* Expenses */,
 				D78A990E289924B0000D361E /* General */,
 			);
 			path = "Expenses TrackerTests";
@@ -189,12 +189,12 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		D78A9919289927B6000D361E /* Expences */ = {
+		D78A9919289927B6000D361E /* Expenses */ = {
 			isa = PBXGroup;
 			children = (
-				D78A991C289927E3000D361E /* ExpencesIntegrationTests.swift */,
+				D78A991C289927E3000D361E /* ExpensesIntegrationTests.swift */,
 			);
-			path = Expences;
+			path = Expenses;
 			sourceTree = "<group>";
 		};
 		D78A991E289928A4000D361E /* Helper */ = {
@@ -414,7 +414,7 @@
 				D78A992428992A8C000D361E /* UIViewContoller+TestHelper.swift in Sources */,
 				D78A9910289924D2000D361E /* UINavigationMakeNavTest.swift in Sources */,
 				D78A9920289928AF000D361E /* SceneBuilder.swift in Sources */,
-				D78A991D289927E3000D361E /* ExpencesIntegrationTests.swift in Sources */,
+				D78A991D289927E3000D361E /* ExpensesIntegrationTests.swift in Sources */,
 				D78A993B28995657000D361E /* ItemsServiceMock.swift in Sources */,
 				D78A992928994CC2000D361E /* FriendsIntegrationTests.swift in Sources */,
 			);
