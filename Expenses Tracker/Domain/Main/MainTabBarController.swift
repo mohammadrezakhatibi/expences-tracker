@@ -25,6 +25,7 @@ class MainTabBarController: UITabBarController {
     private func expensesList() -> ListViewController {
         let expensesList = ListViewController()
         expensesList.title = "Expenses"
+        expensesList.service = filed()
         
         return expensesList
     }
@@ -32,7 +33,12 @@ class MainTabBarController: UITabBarController {
     private func friendsList() -> ListViewController {
         let friendsList = ListViewController()
         friendsList.title = "Friends"
-        
         return friendsList
+    }
+}
+
+class filed: ItemService {
+    func loadItems(completion: @escaping (Result<[ItemsViewModel], Error>) -> Void) {
+        completion(.failure(NSError(domain: "Test", code: 0)))
     }
 }

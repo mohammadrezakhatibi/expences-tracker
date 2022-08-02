@@ -11,22 +11,21 @@ protocol ItemService {
     func loadItems(completion: @escaping (Result<[ItemsViewModel], Error>) -> Void)
 }
 
-class ListViewController: UITableViewController {
+final class ListViewController: UITableViewController {
     
     var items = [ItemsViewModel]()
     var service: ItemService?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        if tableView.numberOfRows(inSection: 0) == 0 {
-            loadItems()
-        }
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        
+        if tableView.numberOfRows(inSection: 0) == 0 {
+            loadItems()
+        }
     }
 
 
@@ -41,6 +40,7 @@ extension ListViewController {
         switch result {
         case let .success(items):
             self.items = items
+            self.tableView.reloadData()
             
         case let .failure(error):
             self.show(error: error)
@@ -57,6 +57,6 @@ extension ListViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 0
+        return items.count
     }
 }

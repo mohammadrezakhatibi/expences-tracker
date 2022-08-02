@@ -26,18 +26,43 @@ class ExpensesIntegrationTests: XCTestCase {
         XCTAssertEqual(sut.title, "Expenses")
     }
     
-    func test_expensesList_callServiceLoadItems_when_viewWillAppear() {
+    func test_expensesList_serviceLoadItemsCalled_when_viewWillAppear() {
         
         let mock = ItemsServiceMock()
         sut.service = mock
         
-        sut.viewDidLoad()
+        sut.viewWillAppear(false)
         
-        XCTAssertEqual(mock.isStarted, true)
+        XCTAssertEqual(mock.isCalled, true)
     }
-
+    
+    func test_expensesList_itemsNotEmpty_when_serviceLoadItemCalled() {
+        
+        let mock = ItemsServiceMock()
+        mock.items = [ItemsViewModel(title: "a title", subtitle: "a subtitle", icon: "icon")]
+        sut.service = mock
+        
+        sut.viewWillAppear(false)
+        
+        XCTAssertEqual(sut.numberOfItems(at: 0), mock.items.count)
+    }
+    
+    func test_expensesList_showErrorAlert_when_serviceLoadItemsFailed() {
+        let mock = ItemsServiceMock.results([
+            .failure(NSError(localizedDescription: "1st request error")),
+        ])
+        sut.service = mock
+        sut.viewWillAppear(false)
+        
+        XCTAssertEqual(sut.numberOfItems(at: 0), 0)
+    }
 }
 
+extension NSError {
+    convenience init(localizedDescription: String) {
+        self.init(domain: "Test", code: 0, userInfo: [NSLocalizedDescriptionKey: localizedDescription])
+    }
+}
 
 private extension ContainerViewControllerSpy {
     ///

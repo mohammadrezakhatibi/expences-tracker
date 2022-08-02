@@ -25,6 +25,7 @@
 		D78A993528995356000D361E /* ItemsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78A993428995356000D361E /* ItemsViewModel.swift */; };
 		D78A99382899549F000D361E /* UIVIewController+showAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78A99372899549F000D361E /* UIVIewController+showAlert.swift */; };
 		D78A993B28995657000D361E /* ItemsServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78A993A28995657000D361E /* ItemsServiceMock.swift */; };
+		E4A94ED42899B0F200111229 /* ListViewContoller+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A94ED32899B0F200111229 /* ListViewContoller+TestHelpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		D78A993428995356000D361E /* ItemsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewModel.swift; sourceTree = "<group>"; };
 		D78A99372899549F000D361E /* UIVIewController+showAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIVIewController+showAlert.swift"; sourceTree = "<group>"; };
 		D78A993A28995657000D361E /* ItemsServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsServiceMock.swift; sourceTree = "<group>"; };
+		E4A94ED32899B0F200111229 /* ListViewContoller+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ListViewContoller+TestHelpers.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +205,7 @@
 				D78A991F289928AF000D361E /* SceneBuilder.swift */,
 				D78A9921289928F7000D361E /* ContainerViewControllerSpy.swift */,
 				D78A992328992A8C000D361E /* UIViewContoller+TestHelper.swift */,
+				E4A94ED32899B0F200111229 /* ListViewContoller+TestHelpers.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -235,8 +238,8 @@
 		D78A9932289952E3000D361E /* List View */ = {
 			isa = PBXGroup;
 			children = (
+				E4A94ED028999FCA00111229 /* View */,
 				D78A99332899533D000D361E /* Models */,
-				D78A992A28995228000D361E /* ListViewController.swift */,
 			);
 			path = "List View";
 			sourceTree = "<group>";
@@ -264,6 +267,14 @@
 				D78A993A28995657000D361E /* ItemsServiceMock.swift */,
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		E4A94ED028999FCA00111229 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D78A992A28995228000D361E /* ListViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -415,6 +426,7 @@
 				D78A9910289924D2000D361E /* UINavigationMakeNavTest.swift in Sources */,
 				D78A9920289928AF000D361E /* SceneBuilder.swift in Sources */,
 				D78A991D289927E3000D361E /* ExpensesIntegrationTests.swift in Sources */,
+				E4A94ED42899B0F200111229 /* ListViewContoller+TestHelpers.swift in Sources */,
 				D78A993B28995657000D361E /* ItemsServiceMock.swift in Sources */,
 				D78A992928994CC2000D361E /* FriendsIntegrationTests.swift in Sources */,
 			);
