@@ -160,11 +160,11 @@
 		D78A98EE289922A5000D361E /* Expenses TrackerTests */ = {
 			isa = PBXGroup;
 			children = (
-				D78A993928995641000D361E /* Mocks */,
-				D78A992528994C9C000D361E /* Friends */,
-				D78A991E289928A4000D361E /* Helper */,
 				D78A9919289927B6000D361E /* Expenses */,
+				D78A992528994C9C000D361E /* Friends */,
 				D78A990E289924B0000D361E /* General */,
+				D78A991E289928A4000D361E /* Helper */,
+				D78A993928995641000D361E /* Mocks */,
 			);
 			path = "Expenses TrackerTests";
 			sourceTree = "<group>";
