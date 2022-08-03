@@ -11,50 +11,41 @@ import Foundation
 private enum MockError: String, Error {
     case failure = "failure"
 }
-class ItemsServiceMock: ItemService {
+
+extension ExpensesAPI {
     
-    private(set) var isCalled: Bool = false
-    var items: [ItemsViewModel] = []
-    
-    func loadItems(completion: @escaping (Result<[ItemsViewModel], Error>) -> Void) {
-        isCalled = true
-        callMockAPI { result in
-            switch result {
-            case let .failure(error):
-                completion(.failure(error))
-            case let .success(items):
-                completion(.success(items))
-            }
-            
-        }
-        
+    static func once(_ expenses: [Expense]) -> ExpensesAPI {
+        results([.success(expenses)])
     }
     
-    func callMockAPI(completion: @escaping (Result<[ItemsViewModel], Error>) -> Void) {
-        completion(.success(self.items))
-    }
-    
-    private class ItemServiceStub: ItemsServiceMock {
-        private let nextResult: () -> Result<[ItemsViewModel], Error>
-        
-        init(resultBuilder: @escaping () -> Result<[ItemsViewModel], Error>) {
-            nextResult = resultBuilder
-        }
-        
-        override func callMockAPI(completion: @escaping (Result<[ItemsViewModel], Error>) -> Void) {
-            completion(nextResult())
-            isCalled = false
-        }
-    }
-    
-    
-    static func results(_ results: [Result<[ItemsViewModel], Error>]) -> ItemsServiceMock {
+    static func results(_ results: [Result<[Expense], Error>]) -> ExpensesAPI {
         var results = results
         return resultBuilder { results.removeFirst() }
     }
     
-    static func resultBuilder(_ resultBuilder: @escaping () -> Result<[ItemsViewModel], Error>) -> ItemsServiceMock {
+    static func resultBuilder(_ resultBuilder: @escaping () -> Result<[Expense], Error>) -> ExpensesAPI {
         ItemServiceStub(resultBuilder: resultBuilder)
     }
+    
+    private class ItemServiceStub: ExpensesAPI {
+        private let nextResult: () -> Result<[Expense], Error>
+        
+        init(resultBuilder: @escaping () -> Result<[Expense], Error>) {
+            nextResult = resultBuilder
+        }
+        
+        override func loadExpenses(compeltion: @escaping (Result<[Expense], Error>) -> Void) {
+            compeltion(nextResult())
+        }
+    }
+    
 }
 
+class ExpensesAPIServiceAdapterMock: ExpensesAPIServiceAdapter {
+    var isCalled: Bool = false
+    
+    override func loadItems(completion: @escaping (Result<[ItemsViewModel], Error>) -> Void) {
+        isCalled = true
+        super.loadItems(completion: completion)
+    }
+}

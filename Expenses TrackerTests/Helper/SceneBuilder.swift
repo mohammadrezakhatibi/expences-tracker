@@ -11,7 +11,11 @@ import UIKit
 
 struct SceneBuilder {
     
-    func build() throws -> ContainerViewControllerSpy {
+    func build(
+        expensesAPI: ExpensesAPI = .once([])
+    ) throws -> ContainerViewControllerSpy {
+        
+        ExpensesAPI.shared = expensesAPI
         return ContainerViewControllerSpy(SceneDelegate.main.makeRootViewcontroller())
     }
 }

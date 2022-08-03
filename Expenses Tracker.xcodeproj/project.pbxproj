@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D73EBB61289A5F1300EC448A /* ExpensesAPIServiceAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73EBB60289A5F1300EC448A /* ExpensesAPIServiceAdapter.swift */; };
+		D73EBB63289A6A8800EC448A /* ExpencesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73EBB62289A6A8800EC448A /* ExpencesAPI.swift */; };
+		D73EBB65289A7B7600EC448A /* NSError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73EBB64289A7B7500EC448A /* NSError.swift */; };
+		D73EBB68289AACAC00EC448A /* FriendsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73EBB67289AACAC00EC448A /* FriendsAPI.swift */; };
+		D73EBB6A289AADA600EC448A /* FriendsAPIItemServiceAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73EBB69289AADA600EC448A /* FriendsAPIItemServiceAdapter.swift */; };
+		D73EBB6C289AAF3B00EC448A /* FriendModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73EBB6B289AAF3B00EC448A /* FriendModelTests.swift */; };
 		D78A98D9289922A3000D361E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78A98D8289922A3000D361E /* AppDelegate.swift */; };
 		D78A98DB289922A3000D361E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78A98DA289922A3000D361E /* SceneDelegate.swift */; };
 		D78A98E2289922A4000D361E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D78A98E1289922A4000D361E /* Assets.xcassets */; };
@@ -46,6 +52,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D73EBB60289A5F1300EC448A /* ExpensesAPIServiceAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesAPIServiceAdapter.swift; sourceTree = "<group>"; };
+		D73EBB62289A6A8800EC448A /* ExpencesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpencesAPI.swift; sourceTree = "<group>"; };
+		D73EBB64289A7B7500EC448A /* NSError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSError.swift; sourceTree = "<group>"; };
+		D73EBB67289AACAC00EC448A /* FriendsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsAPI.swift; sourceTree = "<group>"; };
+		D73EBB69289AADA600EC448A /* FriendsAPIItemServiceAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsAPIItemServiceAdapter.swift; sourceTree = "<group>"; };
+		D73EBB6B289AAF3B00EC448A /* FriendModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendModelTests.swift; sourceTree = "<group>"; };
 		D78A98D5289922A3000D361E /* Expenses Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Expenses Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D78A98D8289922A3000D361E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D78A98DA289922A3000D361E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +108,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D73EBB5F289A5EF200EC448A /* Expenses */ = {
+			isa = PBXGroup;
+			children = (
+				D73EBB60289A5F1300EC448A /* ExpensesAPIServiceAdapter.swift */,
+				D73EBB62289A6A8800EC448A /* ExpencesAPI.swift */,
+			);
+			path = Expenses;
+			sourceTree = "<group>";
+		};
+		D73EBB66289AAC9700EC448A /* Friends */ = {
+			isa = PBXGroup;
+			children = (
+				D73EBB67289AACAC00EC448A /* FriendsAPI.swift */,
+				D73EBB69289AADA600EC448A /* FriendsAPIItemServiceAdapter.swift */,
+			);
+			path = Friends;
+			sourceTree = "<group>";
+		};
 		D78A98CC289922A3000D361E = {
 			isa = PBXGroup;
 			children = (
@@ -206,6 +236,7 @@
 				D78A9921289928F7000D361E /* ContainerViewControllerSpy.swift */,
 				D78A992328992A8C000D361E /* UIViewContoller+TestHelper.swift */,
 				E4A94ED32899B0F200111229 /* ListViewContoller+TestHelpers.swift */,
+				D73EBB64289A7B7500EC448A /* NSError.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -214,6 +245,7 @@
 			isa = PBXGroup;
 			children = (
 				D78A992828994CC2000D361E /* FriendsIntegrationTests.swift */,
+				D73EBB6B289AAF3B00EC448A /* FriendModelTests.swift */,
 			);
 			path = Friends;
 			sourceTree = "<group>";
@@ -221,6 +253,8 @@
 		D78A992D28995288000D361E /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				D73EBB66289AAC9700EC448A /* Friends */,
+				D73EBB5F289A5EF200EC448A /* Expenses */,
 				D78A9932289952E3000D361E /* List View */,
 				D78A9930289952C6000D361E /* Main */,
 			);
@@ -407,13 +441,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D73EBB6A289AADA600EC448A /* FriendsAPIItemServiceAdapter.swift in Sources */,
 				D78A99382899549F000D361E /* UIVIewController+showAlert.swift in Sources */,
+				D73EBB61289A5F1300EC448A /* ExpensesAPIServiceAdapter.swift in Sources */,
 				D78A991428992510000D361E /* UIViewController+makeNav.swift in Sources */,
 				D78A98D9289922A3000D361E /* AppDelegate.swift in Sources */,
 				D78A990D2899237D000D361E /* MainTabBarController.swift in Sources */,
 				D78A992B28995228000D361E /* ListViewController.swift in Sources */,
+				D73EBB68289AACAC00EC448A /* FriendsAPI.swift in Sources */,
 				D78A98DB289922A3000D361E /* SceneDelegate.swift in Sources */,
 				D78A993528995356000D361E /* ItemsViewModel.swift in Sources */,
+				D73EBB63289A6A8800EC448A /* ExpencesAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,7 +466,9 @@
 				D78A991D289927E3000D361E /* ExpensesIntegrationTests.swift in Sources */,
 				E4A94ED42899B0F200111229 /* ListViewContoller+TestHelpers.swift in Sources */,
 				D78A993B28995657000D361E /* ItemsServiceMock.swift in Sources */,
+				D73EBB6C289AAF3B00EC448A /* FriendModelTests.swift in Sources */,
 				D78A992928994CC2000D361E /* FriendsIntegrationTests.swift in Sources */,
+				D73EBB65289A7B7600EC448A /* NSError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

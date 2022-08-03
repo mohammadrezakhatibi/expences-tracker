@@ -25,14 +25,14 @@ class MainTabBarController: UITabBarController {
     private func expensesList() -> ListViewController {
         let expensesList = ListViewController()
         expensesList.title = "Expenses"
-        expensesList.service = filed()
-        
+        expensesList.service = ExpensesAPIServiceAdapter(api: ExpensesAPI.shared)
         return expensesList
     }
     
     private func friendsList() -> ListViewController {
         let friendsList = ListViewController()
         friendsList.title = "Friends"
+        //friendsList.service = FriendsAPIItemServiceAdapter(api: FriendsAPI.shared)
         return friendsList
     }
 }

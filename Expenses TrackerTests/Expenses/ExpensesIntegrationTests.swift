@@ -26,42 +26,69 @@ class ExpensesIntegrationTests: XCTestCase {
         XCTAssertEqual(sut.title, "Expenses")
     }
     
-    func test_expensesList_serviceLoadItemsCalled_when_viewWillAppear() {
+    func test_expensesList_serviceShouldCalled_when_viewWillAppear() throws {
+
+        let adapter = ExpensesAPIServiceAdapterMock(api: .once([]))
+        sut.service = adapter
         
-        let mock = ItemsServiceMock()
-        sut.service = mock
+        sut.simulateLoadData()
         
-        sut.viewWillAppear(false)
-        
-        XCTAssertEqual(mock.isCalled, true)
+        XCTAssertTrue(adapter.isCalled, "service hasn't called")
     }
     
-    func test_expensesList_itemsNotEmpty_when_serviceLoadItemCalled() {
+    func test_expensesList_showErrorAlert_when_serviceLoadItemsFailed() throws {
         
-        let mock = ItemsServiceMock()
-        mock.items = [ItemsViewModel(title: "a title", subtitle: "a subtitle", icon: "icon")]
-        sut.service = mock
+        let exp1 = Expense(id: UUID(), title: "a expense", category: .food, icon: "", date: "")
+        let exp2 = Expense(id: UUID(), title: "a expense", category: .food, icon: "", date: "")
+        sut.service = ExpensesAPIServiceAdapterMock(api: .once([exp1, exp2]))
+        sut.simulateLoadData()
         
-        sut.viewWillAppear(false)
-        
-        XCTAssertEqual(sut.numberOfItems(at: 0), mock.items.count)
+        XCTAssertEqual(sut.numberOfItems(at: 0), 2)
+        XCTAssertEqual(sut.expensesTitle(at: 0), exp1.title, "friend name at row 0")
+        XCTAssertEqual(sut.expensesTitle(at: 1), exp2.title, "friend name at row 1")
     }
     
-    func test_expensesList_showErrorAlert_when_serviceLoadItemsFailed() {
-        let mock = ItemsServiceMock.results([
-            .failure(NSError(localizedDescription: "1st request error")),
-        ])
+    func test_expensesList_emptyTableView_when_serviceFailed() throws {
+        
+        let mock = ExpensesAPIServiceAdapterMock(api: .results([
+            .failure(NSError(localizedDescription: "dsdsd")),
+            .failure(NSError(localizedDescription: "dsdsd")),
+        ]))
+        let sut = try SceneBuilder().build().expensesList()
         sut.service = mock
-        sut.viewWillAppear(false)
+        sut.simulateLoadData()
         
         XCTAssertEqual(sut.numberOfItems(at: 0), 0)
+        
     }
 }
 
-extension NSError {
-    convenience init(localizedDescription: String) {
-        self.init(domain: "Test", code: 0, userInfo: [NSLocalizedDescriptionKey: localizedDescription])
+extension ListViewController {
+    
+    private var expensesSection: Int { 0 }
+    
+    func expensesTitle(at row: Int) -> String? {
+        title(at: IndexPath(row: row, section: expensesSection))
     }
+    
+    func title(at indexPath: IndexPath) -> String? {
+        cell(at: indexPath)?.textLabel?.text
+    }
+    
+    func cell(at indexPath: IndexPath) -> UITableViewCell? {
+        guard numberOfRows(atSection: indexPath.section) > indexPath.row else { return nil }
+        
+        return tableView.dataSource?.tableView(tableView, cellForRowAt: indexPath)
+    }
+    
+    func numberOfRows(atSection section: Int) -> Int {
+        tableView.numberOfSections > section ? tableView.numberOfRows(inSection: section) : 0
+    }
+    
+    func simulateLoadData() {
+        loadItems()
+    }
+    
 }
 
 private extension ContainerViewControllerSpy {

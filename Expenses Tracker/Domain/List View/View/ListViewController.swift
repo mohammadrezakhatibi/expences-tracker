@@ -11,7 +11,7 @@ protocol ItemService {
     func loadItems(completion: @escaping (Result<[ItemsViewModel], Error>) -> Void)
 }
 
-final class ListViewController: UITableViewController {
+class ListViewController: UITableViewController {
     
     var items = [ItemsViewModel]()
     var service: ItemService?
@@ -27,12 +27,10 @@ final class ListViewController: UITableViewController {
             loadItems()
         }
     }
-
-
 }
 
 extension ListViewController {
-    private func loadItems() {
+    func loadItems() {
         service?.loadItems(completion: handleResponse)
     }
     
@@ -58,5 +56,32 @@ extension ListViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return items.count
+    }
+}
+
+extension ListViewController {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let item = items[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ItemCell") ?? UITableViewCell(style: .subtitle, reuseIdentifier: "ItemCell")
+        cell.configure(item)
+        return cell
+    }
+}
+
+extension UITableViewCell {
+    func configure(_ vm: ItemsViewModel) {
+        textLabel?.text = vm.title
+        detailTextLabel?.text = vm.subtitle
+        imageView?.image = UIImage(systemName: vm.icon)
+    }
+}
+
+extension DispatchQueue {
+    static func mainAsyncIfNeeded(execute work: @escaping () -> Void) {
+        if Thread.isMainThread {
+            work()
+        } else {
+            main.async(execute: work)
+        }
     }
 }
