@@ -34,8 +34,8 @@ extension ExpensesAPI {
             nextResult = resultBuilder
         }
         
-        override func loadExpenses(compeltion: @escaping (Result<[Expense], Error>) -> Void) {
-            compeltion(nextResult())
+        override func loadExpenses(completion: @escaping (Result<[Expense], Error>) -> Void) {
+            completion(nextResult())
         }
     }
     

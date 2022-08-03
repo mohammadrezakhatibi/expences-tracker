@@ -28,9 +28,9 @@ class ExpensesAPI {
     
     static var shared = ExpensesAPI()
     
-    func loadExpenses(compeltion: @escaping (Result<[Expense], Error>) -> Void) {
+    func loadExpenses(completion: @escaping (Result<[Expense], Error>) -> Void) {
         DispatchQueue.global().asyncAfter(deadline: .now() + 1)  {
-            compeltion(.success(
+            completion(.success(
                 [
                     Expense(
                         id: UUID(),
