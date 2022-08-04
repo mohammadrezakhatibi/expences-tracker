@@ -32,13 +32,7 @@ class MainTabBarController: UITabBarController {
     private func friendsList() -> ListViewController {
         let friendsList = ListViewController()
         friendsList.title = "Friends"
-        //friendsList.service = FriendsAPIItemServiceAdapter(api: FriendsAPI.shared)
+        friendsList.service = FriendsAPIItemServiceAdapter(api: FriendsAPI.shared)
         return friendsList
-    }
-}
-
-class filed: ItemService {
-    func loadItems(completion: @escaping (Result<[ItemsViewModel], Error>) -> Void) {
-        completion(.failure(NSError(domain: "Test", code: 0)))
     }
 }

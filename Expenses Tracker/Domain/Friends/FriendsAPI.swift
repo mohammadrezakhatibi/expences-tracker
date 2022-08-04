@@ -7,18 +7,23 @@
 
 import Foundation
 
-//class FriendsAPI {
-//    
-//    static var shared = FriendsAPI()
-//    func loadItems(completion: @escaping (Result<[Friend], Error>) -> ()) {
-//        DispatchQueue.global().asyncAfter(deadline: .now() + 1, execute: {
-//            completion(.success([
-//                Friend(id: UUID(), name: "John Knoll", email: "john.knoll@icloud.com", number: "+357-98980876", icon: ""),
-//                Friend(id: UUID(), name: "Mohammadreza Khatibi", email: "me@mohammadreza.me", number: "+357-97728266", icon: ""),
-//            ]))
-//        })
-//    }
-//}
+protocol FriendsService {
+    func loadItems(completion: @escaping (Result<[Friend], Error>) -> ())
+}
+
+class FriendsAPI: FriendsService {
+    
+    static var shared = FriendsAPI()
+    
+    func loadItems(completion: @escaping (Result<[Friend], Error>) -> ()) {
+        DispatchQueue.global().asyncAfter(deadline: .now() + 1, execute: {
+            completion(.success([
+                Friend(id: UUID(), name: "John Knoll", email: "john.knoll@icloud.com", number: "+357-98980876", icon: ""),
+                Friend(id: UUID(), name: "Mohammadreza Khatibi", email: "me@mohammadreza.me", number: "+357-97728266", icon: ""),
+            ]))
+        })
+    }
+}
 
 
 struct Friend {

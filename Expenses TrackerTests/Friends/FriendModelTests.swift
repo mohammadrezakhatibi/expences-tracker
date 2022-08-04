@@ -14,7 +14,7 @@ class FriendModelTests: XCTestCase {
 
     override func setUpWithError() throws {
         try super.setUpWithError()
-        sut = Friend(id: UUID(), name: "a friend", email: "a email", number: "a number", icon: "")
+        sut = Friend(id: UUID(), name: "a friend", email: "an email", number: "a number", icon: "an icon")
     }
 
     override func tearDownWithError() throws {
@@ -27,7 +27,14 @@ class FriendModelTests: XCTestCase {
     }
     
     func test_model_email_when_created() {
-        XCTAssertEqual(sut.email, "a email", "emails should be the same")
+        XCTAssertEqual(sut.email, "an email", "emails should be the same")
     }
-
+    
+    func test_model_number_when_created() {
+        XCTAssertEqual(sut.number, "a number", "emails should be the same")
+    }
+    
+    func test_model_icon_when_created() {
+        XCTAssertEqual(sut.icon, "an icon", "emails should be the same")
+    }
 }

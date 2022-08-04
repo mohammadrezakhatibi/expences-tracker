@@ -8,10 +8,6 @@
 import Foundation
 @testable import Expenses_Tracker
 
-private enum MockError: String, Error {
-    case failure = "failure"
-}
-
 extension ExpensesAPI {
     
     static func once(_ expenses: [Expense]) -> ExpensesAPI {

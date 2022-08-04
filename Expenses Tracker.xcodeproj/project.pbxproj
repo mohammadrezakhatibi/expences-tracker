@@ -32,6 +32,8 @@
 		D78A99382899549F000D361E /* UIVIewController+showAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78A99372899549F000D361E /* UIVIewController+showAlert.swift */; };
 		D78A993B28995657000D361E /* ItemsServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78A993A28995657000D361E /* ItemsServiceMock.swift */; };
 		E4A94ED42899B0F200111229 /* ListViewContoller+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A94ED32899B0F200111229 /* ListViewContoller+TestHelpers.swift */; };
+		E4C01D1B289C5B8F00BBEB39 /* FriendsMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C01D1A289C5B8F00BBEB39 /* FriendsMock.swift */; };
+		E4C01D1F289C662B00BBEB39 /* PostAlertNotificationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C01D1E289C662B00BBEB39 /* PostAlertNotificationTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +83,8 @@
 		D78A99372899549F000D361E /* UIVIewController+showAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIVIewController+showAlert.swift"; sourceTree = "<group>"; };
 		D78A993A28995657000D361E /* ItemsServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsServiceMock.swift; sourceTree = "<group>"; };
 		E4A94ED32899B0F200111229 /* ListViewContoller+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ListViewContoller+TestHelpers.swift"; sourceTree = "<group>"; };
+		E4C01D1A289C5B8F00BBEB39 /* FriendsMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsMock.swift; sourceTree = "<group>"; };
+		E4C01D1E289C662B00BBEB39 /* PostAlertNotificationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostAlertNotificationTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +169,7 @@
 				D78A990E289924B0000D361E /* General */,
 				D78A991E289928A4000D361E /* Helper */,
 				D78A993928995641000D361E /* Mocks */,
+				E4C01D1E289C662B00BBEB39 /* PostAlertNotificationTest.swift */,
 			);
 			path = "Expenses TrackerTests";
 			sourceTree = "<group>";
@@ -299,6 +304,7 @@
 			isa = PBXGroup;
 			children = (
 				D78A993A28995657000D361E /* ItemsServiceMock.swift */,
+				E4C01D1A289C5B8F00BBEB39 /* FriendsMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -465,6 +471,8 @@
 				D78A9920289928AF000D361E /* SceneBuilder.swift in Sources */,
 				D78A991D289927E3000D361E /* ExpensesIntegrationTests.swift in Sources */,
 				E4A94ED42899B0F200111229 /* ListViewContoller+TestHelpers.swift in Sources */,
+				E4C01D1B289C5B8F00BBEB39 /* FriendsMock.swift in Sources */,
+				E4C01D1F289C662B00BBEB39 /* PostAlertNotificationTest.swift in Sources */,
 				D78A993B28995657000D361E /* ItemsServiceMock.swift in Sources */,
 				D73EBB6C289AAF3B00EC448A /* FriendModelTests.swift in Sources */,
 				D78A992928994CC2000D361E /* FriendsIntegrationTests.swift in Sources */,
