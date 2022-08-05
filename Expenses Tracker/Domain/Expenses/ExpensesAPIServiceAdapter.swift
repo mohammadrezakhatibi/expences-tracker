@@ -10,9 +10,9 @@ import Foundation
 
 class ExpensesAPIServiceAdapter: ItemService {
     
-    var api: ExpensesAPI
+    var api: ExpensesService
     
-    init(api: ExpensesAPI) {
+    init(api: ExpensesService) {
         self.api = api
     }
     
@@ -21,7 +21,7 @@ class ExpensesAPIServiceAdapter: ItemService {
             DispatchQueue.mainAsyncIfNeeded {
                 completion(result.map { items in
                     return items.map { item in
-                        ItemsViewModel(title: item.title, subtitle: item.category.rawValue, icon: item.icon)
+                        ItemsViewModel(expense: item)
                     }
                 })
             }

@@ -18,15 +18,16 @@ class MainTabBarController: UITabBarController {
     private func setupViewController() {
         viewControllers = [
             expensesList().addNavigation(title: "Expenses", image: "creditcard"),
-            friendsList().addNavigation(title: "Friends", image: "person.2")
+            friendsList().addNavigation(title: "Friends", image: "person.2"),
         ]
     }
     
     private func expensesList() -> ListViewController {
-        let expensesList = ListViewController()
-        expensesList.title = "Expenses"
-        expensesList.service = ExpensesAPIServiceAdapter(api: ExpensesAPI.shared)
-        return expensesList
+        let vc = ListViewController()
+        vc.title = "Expenses"
+        vc.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: vc, action: #selector(showAddExpense))
+        vc.service = ExpensesAPIServiceAdapter(api: ExpensesAPI.shared)
+        return vc
     }
     
     private func friendsList() -> ListViewController {
@@ -34,5 +35,14 @@ class MainTabBarController: UITabBarController {
         friendsList.title = "Friends"
         friendsList.service = FriendsAPIItemServiceAdapter(api: FriendsAPI.shared)
         return friendsList
+    }
+    
+}
+
+extension UIViewController {
+    @objc func showAddExpense() {
+        let vc = UIViewController()
+        vc.view.backgroundColor = .white
+        show(vc, sender: self)
     }
 }

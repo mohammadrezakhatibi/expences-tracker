@@ -18,6 +18,9 @@ class ListViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        refreshControl = UIRefreshControl()
+        refreshControl?.addTarget(self, action: #selector(loadItems), for: .valueChanged)
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -30,7 +33,9 @@ class ListViewController: UITableViewController {
 }
 
 extension ListViewController {
-    func loadItems() {
+    
+    @objc func loadItems() {
+        refreshControl?.beginRefreshing()
         service?.loadItems(completion: handleResponse)
     }
     
@@ -38,9 +43,11 @@ extension ListViewController {
         switch result {
         case let .success(items):
             self.items = items
+            refreshControl?.endRefreshing()
             self.tableView.reloadData()
             
         case let .failure(error):
+            refreshControl?.endRefreshing()
             self.show(error: error)
         }
     }
@@ -71,7 +78,7 @@ extension ListViewController {
 extension UITableViewCell {
     func configure(_ vm: ItemsViewModel) {
         textLabel?.text = vm.title
-        detailTextLabel?.text = vm.subtitle
+        detailTextLabel?.text = vm.detail
         imageView?.image = UIImage(systemName: vm.icon)
     }
 }

@@ -21,7 +21,7 @@ class FriendsAPIItemServiceAdapter: ItemService {
             DispatchQueue.mainAsyncIfNeeded {
                 completion(result.map { items in
                     return items.map { item in
-                        ItemsViewModel(title: item.name, subtitle: item.email, icon: item.icon)
+                        ItemsViewModel(friend: item)
                     }
                 })
             }

@@ -8,40 +8,43 @@
 import Foundation
 @testable import Expenses_Tracker
 
-extension ExpensesAPI {
+extension MockExpensesAPI {
     
-    static func once(_ expenses: [Expense]) -> ExpensesAPI {
-        results([.success(expenses)])
+    static func never(_ error: Error) -> ExpensesService {
+        results(.failure(error))
     }
     
-    static func results(_ results: [Result<[Expense], Error>]) -> ExpensesAPI {
-        var results = results
-        return resultBuilder { results.removeFirst() }
+    static func success(_ expenses: [Expense]) -> ExpensesService {
+        results(.success(expenses))
     }
     
-    static func resultBuilder(_ resultBuilder: @escaping () -> Result<[Expense], Error>) -> ExpensesAPI {
+    static func results(_ results: Result<[Expense], Error>) -> ExpensesService {
+        return resultBuilder { results }
+    }
+    
+    static func resultBuilder(_ resultBuilder: @escaping () -> Result<[Expense], Error>) -> ExpensesService {
         ItemServiceStub(resultBuilder: resultBuilder)
     }
     
-    private class ItemServiceStub: ExpensesAPI {
+    private class ItemServiceStub: ExpensesService {
         private let nextResult: () -> Result<[Expense], Error>
         
         init(resultBuilder: @escaping () -> Result<[Expense], Error>) {
             nextResult = resultBuilder
         }
         
-        override func loadExpenses(completion: @escaping (Result<[Expense], Error>) -> Void) {
+        func loadExpenses(completion: @escaping (Result<[Expense], Error>) -> Void) {
             completion(nextResult())
         }
     }
     
 }
 
-class ExpensesAPIServiceAdapterMock: ExpensesAPIServiceAdapter {
-    var isCalled: Bool = false
+class MockExpensesAPI: ExpensesService {
     
-    override func loadItems(completion: @escaping (Result<[ItemsViewModel], Error>) -> Void) {
+    var isCalled: Bool = false
+
+    func loadExpenses(completion: @escaping (Result<[Expense], Error>) -> Void) {
         isCalled = true
-        super.loadItems(completion: completion)
     }
 }

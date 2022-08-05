@@ -23,7 +23,6 @@ class MockFriendAPI: FriendsService {
     }
 }
 
-
 extension MockFriendAPI {
     
     static func never(_ error: Error) -> FriendsService {

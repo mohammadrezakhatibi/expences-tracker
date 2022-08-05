@@ -31,9 +31,11 @@ final class UINavigationMakeNavTest: XCTestCase {
     func test_makeNav_title() {
         XCTAssertEqual(sut.tabBarItem.title, "Test")
     }
+    
     func test_makeNav_image() {
         XCTAssertEqual(sut.tabBarItem!.image, UIImage(
             systemName: "folder",
             withConfiguration: UIImage.SymbolConfiguration(scale: .large)))
     }
+    
 }

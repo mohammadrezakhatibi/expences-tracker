@@ -1,5 +1,5 @@
 //
-//  UIVIewController+showAlert.swift
+//  UIViewController+showAlert.swift
 //  Expenses Tracker
 //
 //  Created by mohammdreza on 8/2/22.

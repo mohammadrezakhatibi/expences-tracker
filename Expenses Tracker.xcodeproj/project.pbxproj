@@ -29,7 +29,7 @@
 		D78A992928994CC2000D361E /* FriendsIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78A992828994CC2000D361E /* FriendsIntegrationTests.swift */; };
 		D78A992B28995228000D361E /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78A992A28995228000D361E /* ListViewController.swift */; };
 		D78A993528995356000D361E /* ItemsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78A993428995356000D361E /* ItemsViewModel.swift */; };
-		D78A99382899549F000D361E /* UIVIewController+showAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78A99372899549F000D361E /* UIVIewController+showAlert.swift */; };
+		D78A99382899549F000D361E /* UIViewController+showAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78A99372899549F000D361E /* UIViewController+showAlert.swift */; };
 		D78A993B28995657000D361E /* ItemsServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78A993A28995657000D361E /* ItemsServiceMock.swift */; };
 		E4A94ED42899B0F200111229 /* ListViewContoller+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A94ED32899B0F200111229 /* ListViewContoller+TestHelpers.swift */; };
 		E4C01D1B289C5B8F00BBEB39 /* FriendsMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C01D1A289C5B8F00BBEB39 /* FriendsMock.swift */; };
@@ -80,7 +80,7 @@
 		D78A992828994CC2000D361E /* FriendsIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsIntegrationTests.swift; sourceTree = "<group>"; };
 		D78A992A28995228000D361E /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		D78A993428995356000D361E /* ItemsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewModel.swift; sourceTree = "<group>"; };
-		D78A99372899549F000D361E /* UIVIewController+showAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIVIewController+showAlert.swift"; sourceTree = "<group>"; };
+		D78A99372899549F000D361E /* UIViewController+showAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+showAlert.swift"; sourceTree = "<group>"; };
 		D78A993A28995657000D361E /* ItemsServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsServiceMock.swift; sourceTree = "<group>"; };
 		E4A94ED32899B0F200111229 /* ListViewContoller+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ListViewContoller+TestHelpers.swift"; sourceTree = "<group>"; };
 		E4C01D1A289C5B8F00BBEB39 /* FriendsMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsMock.swift; sourceTree = "<group>"; };
@@ -164,11 +164,11 @@
 		D78A98EE289922A5000D361E /* Expenses TrackerTests */ = {
 			isa = PBXGroup;
 			children = (
+				D78A993928995641000D361E /* Mocks */,
+				D78A991E289928A4000D361E /* Helper */,
 				D78A9919289927B6000D361E /* Expenses */,
 				D78A992528994C9C000D361E /* Friends */,
 				D78A990E289924B0000D361E /* General */,
-				D78A991E289928A4000D361E /* Helper */,
-				D78A993928995641000D361E /* Mocks */,
 				E4C01D1E289C662B00BBEB39 /* PostAlertNotificationTest.swift */,
 			);
 			path = "Expenses TrackerTests";
@@ -295,7 +295,7 @@
 			isa = PBXGroup;
 			children = (
 				D78A991328992510000D361E /* UIViewController+makeNav.swift */,
-				D78A99372899549F000D361E /* UIVIewController+showAlert.swift */,
+				D78A99372899549F000D361E /* UIViewController+showAlert.swift */,
 			);
 			path = UIViewController;
 			sourceTree = "<group>";
@@ -448,7 +448,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D73EBB6A289AADA600EC448A /* FriendsAPIItemServiceAdapter.swift in Sources */,
-				D78A99382899549F000D361E /* UIVIewController+showAlert.swift in Sources */,
+				D78A99382899549F000D361E /* UIViewController+showAlert.swift in Sources */,
 				D73EBB61289A5F1300EC448A /* ExpensesAPIServiceAdapter.swift in Sources */,
 				D78A991428992510000D361E /* UIViewController+makeNav.swift in Sources */,
 				D78A98D9289922A3000D361E /* AppDelegate.swift in Sources */,
